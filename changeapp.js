@@ -9,7 +9,7 @@ if (Meteor.isClient) {
 
 	Template.interests.events({
 		'click .next-button': function (event) {
-			$('.interests').animate({})
+			Router.go('/nonProfits');
 		}
 	});
 
@@ -48,3 +48,10 @@ if (Meteor.isServer) {
 		// code to run on server at startup
 	});
 }
+
+Router.configure({layoutTemplate: 'layout'});
+Router.route('/', function () {
+	Router.go('/interests');
+});
+Router.route('/interests');
+Router.route('/nonProfits');

@@ -1,7 +1,10 @@
 head
     title ChangeApp
-body
-    | {{> interests }}
+body.app-body
+template(name="layout")
+    | {{#transitioner}}
+    |   {{> yield }}
+    | {{/transitioner}}
 template(name="interests")
     div.interests
         | {{#with heading}}
@@ -25,7 +28,7 @@ template(name="interestEntry")
 template(name="nextButton")
     div.next-button
         span.next-text Next
-template(name="non-profits")
+template(name="nonProfits")
     div.non-profits
         | {{#with heading}}
         |   {{> changeHeader }}
