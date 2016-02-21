@@ -1,4 +1,12 @@
 if (Meteor.isClient) {
+	pageOrder = ['interests', 'non-profits'];
+
+	Template.interests.events({
+		'click .next-button': function (event) {
+
+		}
+	});
+
 	Template.interestList.helpers({
 		interestEntries: [
 			{name: 'Animals'},
@@ -17,7 +25,7 @@ if (Meteor.isClient) {
 	});
 
 	Template.interestEntry.events({
-		"click .fa-square": function(event) {
+		"click .fa-square": function (event) {
 			$(event.target).toggleClass('selected');
 		}
 	});
