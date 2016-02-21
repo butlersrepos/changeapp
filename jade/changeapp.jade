@@ -4,11 +4,15 @@ body
     | {{> interests }}
 template(name="interests")
     div.interests
-        header.titleBackground
-            img.logo
-            div.title-text Select the causes you're interested in.
+        | {{#with heading}}
+        |   {{> changeHeader }}
+        | {{/with}}
         | {{> interestList }}
         | {{> nextButton }}
+template(name="changeHeader")
+    header.titleBackground
+        img.logo
+        div.title-text {{ text }}
 template(name="interestList")
     div.interestList
         | {{#each interestEntries}}
@@ -16,8 +20,13 @@ template(name="interestList")
         | {{/each}}
 template(name="interestEntry")
     div.interest-entry
-            i.fa.fa-square
-            label {{ name }}
+        i.fa.fa-square
+        label {{ name }}
 template(name="nextButton")
     div.next-button
         span.next-text Next
+template(name="non-profits")
+    div.non-profits
+        | {{#with heading}}
+        |   {{> changeHeader }}
+        | {{/with}}

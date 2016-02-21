@@ -1,9 +1,15 @@
 if (Meteor.isClient) {
 	pageOrder = ['interests', 'non-profits'];
 
+	Template.interests.helpers({
+		heading: {
+			text: "Select the causes you're interested in."
+		}
+	});
+
 	Template.interests.events({
 		'click .next-button': function (event) {
-
+			$('.interests').animate({})
 		}
 	});
 
@@ -30,6 +36,11 @@ if (Meteor.isClient) {
 		}
 	});
 
+	Template.nonProfits.helpers({
+		heading: {
+			text: "Select the non-profits you're interested in."
+		}
+	});
 }
 
 if (Meteor.isServer) {
