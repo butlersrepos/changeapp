@@ -1,0 +1,19 @@
+head
+    title ChangeApp
+body
+    | {{> interests }}
+    | {{> interestList }}
+template(name="interests")
+    div.interests
+        header.titleBackground
+            img.logo
+            div.title-text Select the causes you're interested in.
+template(name="interestList")
+    div.interestList
+        | {{#each interestEntries}}
+        |   {{> interestEntry }}
+        | {{/each}}
+template(name="interestEntry")
+    div.interest-entry
+        input(type="checkbox", name="interest-choices")
+        label {{ name }}

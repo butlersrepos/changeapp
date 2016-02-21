@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+
+.datGradient {
+	/* IE10+ */
+	background-image: -ms-linear-gradient(top left, #8CC63F 0%, #2cb7ad 100%);
+	/* Mozilla Firefox */
+	background-image: -moz-linear-gradient(top left, #8CC63F 0%, #2cb7ad 100%);
+	/* Opera */
+	background-image: -o-linear-gradient(top left, #8CC63F 0%, #2cb7ad 100%);
+	/* Webkit (Safari/Chrome 10) */
+	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #8CC63F), color-stop(100, #2cb7ad));
+	/* Webkit (Chrome 11+) */
+	background-image: -webkit-linear-gradient(top left, #8CC63F 0%, #2cb7ad 100%);
+	/* W3C Markup */
+	background-image: linear-gradient(to bottom right, #8CC63F 0%, #2cb7ad 100%);
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.interests {
+	header {
+		@extend .datGradient;
+		color: white;
+		height: 40vh;
+		padding: 1vh 10% 0 10%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.logo {
+			height: 10vh;
+			width: 40vw;
+			background: lightgray;
+			margin-top: 2vh;
+		}
+
+		.title-text {
+			font-size: 5vh;
+			text-align: center;
+		}
+	}
+}
+
+.interestList {
+	background: lightgray;
+	position: fixed;
+	top: 30vh;
+	height: 55vh;
+	width: 90vw;
+	left: 5vw;
+
+	.interest-entry {
+		input {
+			font-size: 5vh;
+			zoom: 5;
+			margin: 0;
+		}
+
+		font-size: 5vh;
+	}
+}

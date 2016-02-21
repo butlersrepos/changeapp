@@ -1,0 +1,19 @@
+{
+  "name": "changeapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "changeapp.js",
+  "scripts": {
+    "build": "node node_modules/.bin/jade jade/ -o ./ & node node_modules/.bin/node-sass scss/ -o ./",
+    "watch": "node node_modules/.bin/jade jade/ -o ./ -w & node node_modules/.bin/node-sass scss/ -o ./ -w",
+    "start": "npm run build & meteor",
+    "dev": "npm run build && npm run watch & meteor",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jade": "^1.11.0",
+    "node-sass": "^3.4.2"
+  }
+}
