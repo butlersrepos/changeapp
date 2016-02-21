@@ -15,6 +15,13 @@ if (Meteor.isClient) {
 			{name: 'Homelessness'}
 		]
 	});
+
+	Template.interestEntry.events({
+		"click .fa-square": function(event) {
+			$(event.target).toggleClass('selected');
+		}
+	});
+
 }
 
 if (Meteor.isServer) {

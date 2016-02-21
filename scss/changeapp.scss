@@ -56,23 +56,23 @@ body {
 	left: 5vw;
 	overflow-y: scroll;
 
-	::-webkit-scrollbar {
-		-webkit-appearance: none;
-		width: 7px;
-	}
-	::-webkit-scrollbar-thumb {
-		border-radius: 4px;
-		background-color: rgba(0, 0, 0, .5);
-		-webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
-	}
-
 	.interest-entry {
-		input {
-			font-size: 5vh;
-			zoom: 5;
-			margin: 0;
+		display: flex;
+		align-items: center;
+		font-size: 5vh;
+
+		i.fa-square {
+			flex: 1 0 0;
+			color: white;
+			text-align: center;
+
+			&.selected {
+				color: #00a99d;
+			}
 		}
 
-		font-size: 5vh;
+		label {
+			flex: 7 0 0;
+		}
 	}
 }
