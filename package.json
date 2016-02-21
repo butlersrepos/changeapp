@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "foundation-apps": "^1.2.0",
     "jade": "^1.11.0",
     "node-sass": "^3.4.2"
   }

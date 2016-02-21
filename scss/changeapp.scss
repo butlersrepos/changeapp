@@ -54,14 +54,25 @@ body {
 	height: 55vh;
 	width: 90vw;
 	left: 5vw;
+	overflow-y: scroll;
 
 	.interest-entry {
-		input {
-			font-size: 5vh;
-			zoom: 5;
-			margin: 0;
+		display: flex;
+		align-items: center;
+		font-size: 5vh;
+
+		i.fa-square {
+			flex: 1 0 0;
+			color: white;
+			text-align: center;
+
+			&.selected {
+				color: #00a99d;
+			}
 		}
 
-		font-size: 5vh;
+		label {
+			flex: 7 0 0;
+		}
 	}
 }

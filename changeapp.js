@@ -1,27 +1,27 @@
 if (Meteor.isClient) {
-	// counter starts at 0
-	Session.setDefault('counter', 0);
-
-	Template.interests.helpers({
-		counter: function () {
-			return Session.get('counter');
-		}
-	});
-
-	Template.interests.events({
-		'click button': function () {
-			// increment the counter when button is clicked
-			Session.set('counter', Session.get('counter') + 1);
-		}
-	});
-
 	Template.interestList.helpers({
 		interestEntries: [
 			{name: 'Animals'},
 			{name: 'Cancer Research'},
-			{name: 'Cancer Research2'}
+			{name: 'Multiple Sclerosis Research'},
+			{name: 'AIDS Research'},
+			{name: 'Transportation'},
+			{name: 'Reliable Energy'},
+			{name: 'Gender Equality'},
+			{name: 'Nature Preservation'},
+			{name: 'Climate Change'},
+			{name: 'Education'},
+			{name: 'Domestic Abuse'},
+			{name: 'Homelessness'}
 		]
 	});
+
+	Template.interestEntry.events({
+		"click .fa-square": function(event) {
+			$(event.target).toggleClass('selected');
+		}
+	});
+
 }
 
 if (Meteor.isServer) {
